@@ -1,0 +1,37 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.mat-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.mat-header-cell,
+.mat-cell {
+  padding: 12px;
+  text-align: left;
+}
+
+.product-image {
+  max-width: 90px;
+  height: auto;
+}
+
+.action-header,
+.action-cell {
+  text-align: center;
+}
+
+.action-cell button {
+  margin: 0 4px;
+}
+
+.mat-elevation-z8 {
+  max-height: 60vh;
+  overflow-y: auto;
+}

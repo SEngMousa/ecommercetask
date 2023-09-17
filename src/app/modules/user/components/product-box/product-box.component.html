@@ -1,0 +1,38 @@
+<div class="product-detail">
+  <div class="product-image">
+    <img [src]="product.image" alt="{{ product.title }}" />
+  </div>
+  <div class="product-info">
+    <p>{{ product.title }}</p>
+    <div class="price">{{ product.price | currency : "USD" }}</div>
+    <div class="category">{{ product.category }}</div>
+    <div class="rating mb-2" *ngIf="product.rating">
+      <ng-container
+        *ngFor="
+          let i of getArrayFromNumber(product.rating.rate);
+          let index = index
+        "
+      >
+        <mat-icon>star</mat-icon>
+      </ng-container>
+      <ng-container
+        *ngFor="
+          let i of getArrayFromNumber(5 - product.rating.rate);
+          let index = index
+        "
+      >
+        <mat-icon>star_border</mat-icon>
+      </ng-container>
+      <span> ({{ product.rating.count }}) </span>
+    </div>
+    <button
+      mat-raised-button
+      color="primary"
+      matTooltip="{{ 'viewDetails' | translate }}"
+      class="view-details"
+      (click)="viewDetails(product)"
+    >
+      <mat-icon>visibility</mat-icon>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div>
+  <div class="page-wrapper">
+    <app-navbar></app-navbar>
+
+    <div class="page-body-wrapper">
+      <div class="page-sidebar" [class.open]="navService.collapseSidebar">
+        <app-sidebar></app-sidebar>
+      </div>
+      <div class="page-body">
+        <main>
+          <router-outlet></router-outlet>
+        </main>
+      </div>
+      <footer class="footer">
+        <app-footer></app-footer>
+      </footer>
+    </div>
+  </div>
+</div>

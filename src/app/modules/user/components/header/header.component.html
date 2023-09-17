@@ -1,0 +1,52 @@
+<header class="p-3 mb-3 border-bottom sticky" [class.fixed]="stick">
+  <div class="container">
+    <div
+      class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+    >
+      <a
+        href="/"
+        class="logo d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none"
+      >
+        <img src="assets/images/stc.png" />
+      </a>
+      <div class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3 d-flex">
+        <div>
+          <a
+            *ngIf="translate.currentLang == 'ar'"
+            (click)="toEnglish()"
+            class="nav-link px-2 nav-link"
+          >
+            <h6>English</h6>
+          </a>
+          <a
+            *ngIf="translate.currentLang == 'en'"
+            (click)="toArabic()"
+            class="nav-link px-2 nav-link"
+          >
+            <h6>عربي</h6>
+          </a>
+        </div>
+
+        <div class="dropdown text-end">
+          <a
+            href="#"
+            class="d-block link-dark text-decoration-none dropdown-toggle"
+            id="dropdownUser1"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img
+              src="assets/images/person.webp"
+              width="32"
+              height="32"
+              class="rounded-circle"
+            />
+          </a>
+          <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+            <li><a class="dropdown-item" (click)="signOut()">Sign out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

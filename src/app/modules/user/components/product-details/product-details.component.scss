@@ -1,0 +1,51 @@
+.dialog-content {
+  padding: 16px;
+  overflow: hidden;
+}
+
+.product-details {
+  display: flex;
+}
+
+.product-image {
+  flex: 1;
+  margin-right: 16px;
+}
+
+.product-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-info {
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+}
+
+.category,
+.price,
+.description {
+  display: block;
+}
+.dialog-title {
+  color: #673ab7;
+
+  overflow: hidden;
+}
+
+.close-button {
+  position: absolute;
+  right: 16px;
+  top: 8px;
+}
+.rating {
+  display: flex;
+  font-size: 12px;
+  flex-direction: row-reverse;
+  mat-icon {
+    width: 16px;
+    font-size: 18px;
+    color: gold;
+  }
+}

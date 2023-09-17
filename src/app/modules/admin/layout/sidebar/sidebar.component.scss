@@ -1,0 +1,69 @@
+.sidebareImage {
+  vertical-align: unset;
+}
+.nav-link.header {
+  font-weight: 700;
+}
+.sidebar:not(.toggled) .nav-item .nav-link.collapsed {
+  background: unset !important;
+  font-weight: 500;
+}
+.sidebar:not(.toggled) .nav-item:not(.active) .nav-link:not(.collapsed) {
+  background: white;
+  display: block;
+  width: 100%;
+
+  margin: 1rem;
+  width: 12rem;
+  padding: 0.5rem !important;
+  border-radius: 5px;
+  color: #1a1e1c;
+  font-weight: 500;
+}
+
+.sidebar .nav-item:not(.active) .nav-link:not(.collapsed) {
+  background: white;
+
+  color: #1a1e1c;
+}
+.nav-item.active .nav-link {
+  background: unset !important;
+}
+.nav-link:not(.collapsed) .sidebareImage {
+  filter: invert(0.9);
+}
+.sidebareImage {
+  height: 18px;
+  width: 18px;
+  vertical-align: bottom;
+}
+.sidebar .nav-item .nav-link span {
+  vertical-align: bottom;
+}
+.collapse-item:hover {
+  filter: invert(0.9);
+  background-color: #18181a !important;
+}
+.collapse-item.active {
+  filter: invert(0.9);
+  background-color: #18181a !important;
+}
+.collapse-item {
+  font-weight: 400 !important;
+  font-size: 13px !important;
+
+  color: #fff;
+}
+.sidebar.toggled li .collapse.show {
+  box-shadow: 10px 10px 9px;
+  border-radius: 7px;
+}
+.sidebar.toggled li .collapse.show .collapse-inner .collapse-item span {
+  color: #fff;
+}
+.collapse.show {
+  background: #1a1e1c;
+}
+#accordionSidebar {
+  height: 100%;
+}

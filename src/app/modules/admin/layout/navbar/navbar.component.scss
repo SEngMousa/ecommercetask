@@ -1,0 +1,17 @@
+ul.notification-dropdown.onhover-show-div li:hover {
+  background-color: #202020;
+  color: #fff !important;
+}
+ul.notification-dropdown.onhover-show-div li:hover h6 {
+  color: #fff !important;
+}
+.onhover-show-div {
+  transition: all ease-in-out 0.7s;
+}
+.page-main-header .main-header-right .nav-right .profile-dropdown {
+  right: -10px;
+  left: inherit;
+  width: 200px;
+  top: 63px;
+  padding: 20px;
+}

@@ -1,0 +1,112 @@
+<section class="section-b-space">
+  <div class="collection-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="collection-filter">
+            <div class="collection-filter-block">
+              <div class="collection-collapse-block border-0">
+                <h3 class="collapse-block-title">
+                  {{ "category" | translate }}
+                </h3>
+                <div class="collection-collapse-block-content">
+                  <div class="collection-brand-filter">
+                    <ul class="category-list">
+                      <li *ngFor="let category of categories">
+                        <a
+                          [ngClass]="{
+                            highlight: selectedCategory == category
+                          }"
+                          (click)="categoryChanged(category)"
+                        >
+                          {{ category }}</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="collection-content col">
+          <div class="page-main-content">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="collection-product-wrapper">
+                  <div class="product-top-filter">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="product-filter-content">
+                          <div class="collection-grid-view">
+                            <ul>
+                              <li (click)="setGridLayout('col-lg-6')">
+                                <img
+                                  src="assets/images/icon/2.png"
+                                  class="product-2-layout-view"
+                                />
+                              </li>
+                              <li (click)="setGridLayout('col-lg-4')">
+                                <img
+                                  src="assets/images/icon/3.png"
+                                  class="product-3-layout-view"
+                                />
+                              </li>
+                              <li (click)="setGridLayout('col-lg-3')">
+                                <img
+                                  src="assets/images/icon/4.png"
+                                  class="product-4-layout-view"
+                                />
+                              </li>
+                              <li (click)="setGridLayout('col-lg-2')">
+                                <img
+                                  src="assets/images/icon/6.png"
+                                  class="product-6-layout-view"
+                                />
+                              </li>
+                            </ul>
+                            <div class="search-results-label">
+                              {{ "displaying" | translate }}
+                              <span class="text-decoration-underline">
+                                {{ products.length }}</span
+                              >
+                              {{ "displaying_products" | translate }}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="product-wrapper-grid">
+                    <div class="row">
+                      <div>
+                        <mat-spinner
+                          class="m-auto"
+                          *ngIf="isLoading"
+                          diameter="50"
+                        ></mat-spinner>
+                      </div>
+                      <div
+                        class="col-grid-box col-6"
+                        [ngClass]="grid"
+                        *ngFor="let product of products"
+                        [@scaleInAnimation]
+                      >
+                        <div class="product-box">
+                          <app-product-box [product]="product">
+                          </app-product-box>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

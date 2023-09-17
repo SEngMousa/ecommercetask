@@ -1,0 +1,65 @@
+<div class="page-main-header" [class.open]="open">
+  <div class="main-header-right row">
+    <div class="main-header-left d-lg-none col">
+      <div class="logo-wrapper">
+        <a [routerLink]="'/dashboard/default'"
+          ><img
+            class="blur-up lazyloaded"
+            src="assets/images/STC-Logo.jpg"
+            alt=""
+        /></a>
+      </div>
+    </div>
+    <div class="mobile-sidebar col">
+      <div class="media-body switch-sm">
+        <label class="switch">
+          <a>
+            <mat-icon (click)="collapseSidebar()">format_align_left</mat-icon>
+          </a>
+        </label>
+      </div>
+    </div>
+    <div class="nav-right col">
+      <ul class="nav-menus" [ngClass]="{ open: openNav }">
+        <li class="onhover-dropdown">
+          <a
+            *ngIf="translate.currentLang == 'ar'"
+            (click)="ToEnglish()"
+            class="txt-dark"
+          >
+            <h6>English</h6>
+          </a>
+          <a
+            *ngIf="translate.currentLang == 'en'"
+            (click)="ToArabic()"
+            class="txt-dark"
+          >
+            <h6>عربي</h6>
+          </a>
+        </li>
+        <li class="onhover-dropdown">
+          <div class="media align-items-center">
+            <img
+              class="align-self-center pull-right img-50 rounded-circle"
+              src="assets/images/person.webp"
+              alt="header-user"
+            />
+          </div>
+          <ul
+            class="profile-dropdown onhover-show-div p-20 profile-dropdown-hover"
+          >
+            <li>
+              <a (click)="logout()">
+                <mat-icon>logout</mat-icon>
+                {{ "LogOut" | translate }}</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <div class="d-lg-none mobile-toggle pull-right" (click)="openMobileNav()">
+        <mat-icon>unfold_more_double</mat-icon>
+      </div>
+    </div>
+  </div>
+</div>
